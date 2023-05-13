@@ -1,0 +1,5 @@
+/*global css yani tüm projede olmasını istediğim şeyleri buraya ekliyorum örneğin yazı stili gibi*/
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~alertifyjs/build/css/alertify.min.css";
+@import "~alertifyjs/build/css/themes/bootstrap.min.css"

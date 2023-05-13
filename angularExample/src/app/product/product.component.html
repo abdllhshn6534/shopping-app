@@ -1,0 +1,24 @@
+<h3>{{title}}</h3>
+<app-category></app-category>
+
+<div class="row" >
+  
+  <div class="mb-3">
+    <input class="form-control" id="exampleInputEmail1" placeholder="Arama ifadenizi girin"
+     [(ngModel)]="filterText">
+     <div *ngIf="filterText" class="form-text"> {{filterText}} ürünleri </div>
+  </div>
+
+  <div class="productBox" style="width: 18rem;" *ngFor="let product of products |productFilter:filterText" >
+    <img src="{{product.img}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product.description |uppercase }}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <p>{{product.price | currency}}</p>
+      
+      <a (click)="addToCard(product)" class="btn btn-primary">{{buttons}}</a>
+
+    </div>
+  </div>
+</div>
